@@ -15,8 +15,8 @@ class homePage {
         .click(`.contact-form-submit-btn`)
     }
 
-    async isHeaderDisplayed(text: string) {
-        return Selector(`h2`).withText(text);
+    async isHeaderDisplayed(text: string): Promise<boolean> {
+        return Selector(`h2`).withText(text).visible;
     }
 }
 
