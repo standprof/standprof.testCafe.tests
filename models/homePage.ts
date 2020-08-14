@@ -14,6 +14,10 @@ class homePage {
         .typeText(`[name='Details']`, details)
         .click(`.contact-form-submit-btn`)
     }
+
+    async isHeaderDisplayed(text: string) {
+        return Selector(`h2`).withText(text);
+    }
 }
 
 export default new homePage();
