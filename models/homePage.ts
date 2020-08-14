@@ -1,6 +1,7 @@
 import { Selector, t } from 'testcafe';
 
 class homePage {
+   
     constructor(){
     }
 
@@ -17,6 +18,10 @@ class homePage {
 
     async isHeaderDisplayed(text: string): Promise<boolean> {
         return Selector(`h2`).withText(text).visible;
+    }
+
+    async clickOurServices() {
+        await t.click(Selector(`a`).withText('VIEW OUR SERVICES'));
     }
 }
 
